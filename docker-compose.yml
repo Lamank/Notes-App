@@ -1,0 +1,31 @@
+version: '3.1'
+services :
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    container_name: db
+    ports:
+      - "5432:5432"
+    
+    environment:
+      POSTGRES_USER: 'notes' 
+      POSTGRES_PASSWORD: 'notes'
+      POSTGRES_DB: notes
+      POSTGRES_EXTRA_OPTS: -Z9 --schema=public --blobs
+      SCHEDULE: every 0h30m00s
+      BACKUP_KEEP_DAYS: 7
+      BACKUP_KEEP_WEEKS: 4
+      BACKUP_KEEP_MONTHS: 6
+      HEALTHCHECK_PORT: 81
+
+    # volumes:
+    #   - /src/dumps/:/data
+
+
+  admin:
+    image: adminer
+    restart: always
+    depends_on: 
+      - postgres
+    ports:
+      - 8080:8080
