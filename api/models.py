@@ -11,4 +11,4 @@ class Note(models.Model):
         return self.body[0:50]
 
     class Meta:
-        verbose_name = "Notes"
+        verbose_name = "Note"
