@@ -80,4 +80,5 @@ def createNote(request):
 def deleteNote(request, pk):
     note = Note.objects.get(id=pk)
     note.delete()
+    
     return Response('Note deleted successfully!')
