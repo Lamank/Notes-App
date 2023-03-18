@@ -13,61 +13,69 @@ const NotePage = (history) => {
     }, [id]);
 
     let getNote = async ()=>{
-        if (id === 'new') return
-        let response = await fetch(`/api/notes/${id}/`);
-        let data = await response.json();
+      if (id === 'new') return
+      let response = await fetch(`/api/notes/${id}/`);
+      let data = await response.json();
 
-        setNote(data);
+      setNote(data);
     };
 
     let createNote = async ()=>{
-      fetch(`/api/notes/`,{
+      let response = await fetch(`/api/notes/`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(note)
-
       });
+      let data = await response.json();
+
+      setNote(data);
     };
 
     let updateNote = async ()=>{
-      fetch(`/api/notes/${id}/`,{
+      let response = await fetch(`/api/notes/${id}/`,{
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(note)
-
       });
+      let data = await response.json();
+
+      setNote(data);
     };
     
     let deleteNote = async () =>{
-      fetch(`/api/notes/${id}/`,{
+      await fetch(`/api/notes/${id}/`,{
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
         },
       });
+      setNote(null);
       navigate(`/`);
     }
 
-    let handleSubmit = () => {
+    let handleSubmit = async () => {
       if(id !== 'new' && note.body === ''){
         deleteNote();
       }
       else if(id !== 'new'){
-        updateNote();
+        await updateNote();
       }
       else if(id === 'new' && note.body !== null){
-        createNote();
+        await createNote();
       }
-      navigate(`/`);
+      navigate(-1);
     };
+
+  
 
     let handleChange = (value) => {
       setNote(note => ({...note, 'body':value}));
     };
+
   return (
     <div className='note'>
       <div className='notes-header'>
