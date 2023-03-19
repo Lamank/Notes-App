@@ -5,30 +5,30 @@ This project is a complete CRUD (Create, Read, Update, Delete) application that 
 
 ### Notes APIs
 
-`GET /notes` -- Returns an array of notes
-`\POST /notes` -- Creates new note with data sent in post request
-`\GET /notes/id` -- Returns a single note object
-`\PUT /notes/id` -- Updates an existing note with data sent in post request
-`\DELETE /notes/id` -- Delete an existing note
+```GET /notes``` -- Returns an array of notes 
+```POST /notes``` -- Creates new note with data sent in post request
+```GET /notes/id``` -- Returns a single note object
+```PUT /notes/id``` -- Updates an existing note with data sent in post request
+```DELETE /notes/id``` -- Delete an existing note
  
 ## How to run
 ### Cloning the repository
 
-1. Clone the repository by running the following command:
-`\https://github.com/Lamank/Notes-App.git`
+1. Clone the repository by running the following command :
+`https://github.com/Lamank/Notes-App.git`
 
-2. Move into the directory where the project files are located:
-`\cd Notes-App`
+2. Move into the directory where the project files are located :
+`cd Notes-App`
 
 ### Create a Virtual Environment
-1. Create a virtual environment:
+1. Create a virtual environment :
 ```
 # If you are on Windows
 virtualenv env
 # If you are on Linux or Mac
 python -m venv env
 ```
-2. Activate the virtual environment:
+2. Activate the virtual environment :
 ```
 # If you are on Windows
 .\env\Scripts\activate
@@ -36,14 +36,14 @@ python -m venv env
 source env/bin/activate
 ```
 ### Install the Requirements
-Install the necessary requirements by running the following command:
+Install the necessary requirements by running the following command :
 `pip install -r requirements.txt`
 
 ### Set Up the Environment Variables
-1. Create an environment file
+1. Create an environment file : 
 `mkdir .env`
 
-2. Add the following variables to the environment file:
+2. Add the following variables to the environment file :
 ```
 POSTGRES_USER=YOUR_USER
 POSTGRES_PASSWORD=YOUR_PASSWORD
@@ -53,11 +53,11 @@ POSTGRES_PORT=YOUR_PORT
 SECRET_KEY=YOUR_SECRET_KEY
 ```
 ### Activate Docker-Compose
-Activate docker-compose by running the following command:
+Activate docker-compose by running the following command :
 `docker-compose up -d`
 
 ### Migrate the Migration
-Run the migration using the following command:
+Run the migration using the following command :
 `python manage.py migrate`
 
 ### Run the Server
