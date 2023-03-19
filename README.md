@@ -5,20 +5,20 @@ This project is a complete CRUD (Create, Read, Update, Delete) application that 
 
 ### Notes APIs
 
-```GET /notes``` -- Returns an array of notes 
-```POST /notes``` -- Creates new note with data sent in post request
-```GET /notes/id``` -- Returns a single note object
-```PUT /notes/id``` -- Updates an existing note with data sent in post request
-```DELETE /notes/id``` -- Delete an existing note
+- ```GET /notes``` -- Returns an array of notes 
+- ```POST /notes``` -- Creates new note with data sent in post request
+- ```GET /notes/id``` -- Returns a single note object
+- ```PUT /notes/id``` -- Updates an existing note with data sent in post request
+- ```DELETE /notes/id``` -- Delete an existing note
  
 ## How to run
 ### Cloning the repository
 
 1. Clone the repository by running the following command :
-`https://github.com/Lamank/Notes-App.git`
+- `https://github.com/Lamank/Notes-App.git`
 
 2. Move into the directory where the project files are located :
-`cd Notes-App`
+- `cd Notes-App`
 
 ### Create a Virtual Environment
 1. Create a virtual environment :
@@ -37,11 +37,11 @@ source env/bin/activate
 ```
 ### Install the Requirements
 Install the necessary requirements by running the following command :
-`pip install -r requirements.txt`
+- `pip install -r requirements.txt`
 
 ### Set Up the Environment Variables
 1. Create an environment file : 
-`mkdir .env`
+- `mkdir .env`
 
 2. Add the following variables to the environment file :
 ```
@@ -54,11 +54,11 @@ SECRET_KEY=YOUR_SECRET_KEY
 ```
 ### Activate Docker-Compose
 Activate docker-compose by running the following command :
-`docker-compose up -d`
+- `docker-compose up -d`
 
 ### Migrate the Migration
 Run the migration using the following command :
-`python manage.py migrate`
+- `python manage.py migrate`
 
 ### Run the Server
 Start the server by running the following command:
