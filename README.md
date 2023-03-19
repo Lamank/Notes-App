@@ -6,19 +6,19 @@ This project is a complete CRUD (Create, Read, Update, Delete) application that 
 ### Notes APIs
 
 `GET /notes` -- Returns an array of notes
-`POST /notes` -- Creates new note with data sent in post request
-`GET /notes/id` -- Returns a single note object
-`PUT /notes/id` -- Updates an existing note with data sent in post request
-`DELETE /notes/id` -- Delete an existing note
+`\POST /notes` -- Creates new note with data sent in post request
+`\GET /notes/id` -- Returns a single note object
+`\PUT /notes/id` -- Updates an existing note with data sent in post request
+`\DELETE /notes/id` -- Delete an existing note
  
 ## How to run
 ### Cloning the repository
 
 1. Clone the repository by running the following command:
-`https://github.com/Lamank/Notes-App.git`
+`\https://github.com/Lamank/Notes-App.git`
 
 2. Move into the directory where the project files are located:
-`cd Notes-App`
+`\cd Notes-App`
 
 ### Create a Virtual Environment
 1. Create a virtual environment:
@@ -27,7 +27,6 @@ This project is a complete CRUD (Create, Read, Update, Delete) application that 
 virtualenv env
 # If you are on Linux or Mac
 python -m venv env
-
 ```
 2. Activate the virtual environment:
 ```
